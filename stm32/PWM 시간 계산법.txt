@@ -1,0 +1,26 @@
+아두이노처럼 256 ( 0 ~ 255 )단계의 제어를 만든다
+
+go =127 OR // duty 50% >> 499 
+stop = 255 // duty 100% >> 999
+slow = 179 // duty 70.3125% ?>> 799
+
+
+PWM 시간 계산
+CLOCK = 72MHz
+Period = 400
+Prescaler = 3
+
+72MHz / Prescaler = 24MHz
+
+24MHz / Period = 60KHz
+
+===================
+
+170MHz >> 100 STEP
+Prescaler = 1700 (17K)
+Period = 1000
+170 000 000MHz / Prescaler = 100,000Hz (100KHz)
+100 000 / Period = 1000Hz
+
+
+

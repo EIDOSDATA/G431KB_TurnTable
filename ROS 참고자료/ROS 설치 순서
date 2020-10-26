@@ -1,0 +1,7 @@
+ROS 설치 순서( 라이브러리 추가하기 )
+1. catkin?? _Work Space경로에서
+catkin_make (build)
+Build 전에 라이브러리를 catkin_ws>> SRC경로에 빌드할 폴더를 넣어준다.
+	그 외에 아무것도 없다....
+	>> 잊을까봐 적는다.	velodyne_custom 도 SRC 경로에 넣고 catkin_make를 돌리면 된다.
+	>> 아 괜히 삽질했다.
