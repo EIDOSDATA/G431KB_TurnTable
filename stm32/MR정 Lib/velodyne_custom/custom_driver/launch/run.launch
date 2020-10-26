@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find custom_driver)/config/turn_table.rviz" />
+  
+  <rosparam file="$(find custom_driver)/config/lidar_channel_ids.yaml" command="load"/>
+  
+  <node pkg="custom_driver" type="custom_driver" name="custom_driver" output="screen" >
+    <param name="use_sim" value="false" />
+    <param name="frame_id" value="turntable" />
+    <param name="port" value="2368" />
+    <param name="LiDAR_time_offset" value="0.0" />
+    <param name="LiDAR_pitch_offset" value="-45.0" />
+    <param name="LiDAR_roll_offset" value="0.0" />
+    <param name="LiDAR_azimuth_offset" value="2.0" />
+  </node>
+</launch>
